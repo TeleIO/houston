@@ -18,40 +18,37 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-   
-   
-      # run tests!
-      - run:
-          name: Building
-          command: |
-            nanoc compile
-            ls
-      - run:
-          name: Prepare ZIP to upload...
-          command: |
-            cd public
-            zip -r Houston.zip *
-            mkdir zip_f
-            mv Houston.zip zip_f
-            ls
-            echo "All is OK!"
-            ls zip_f
-      # collect reports
-
-      - store_artifacts:
-          path: ~/repo/public/zip_f
-          destination: build
-      - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
-          root: public/zip_f
-          # Must be relative path from root
-          paths:
-            - Houston.zip
+       - checkout
+       - run:
+           name: install dependencies
+           command: |
+             bundle install --jobs=4 --retry=3 --path vendor/bundle
+       # run tests!
+       - run:
+           name: Building
+           command: |
+             nanoc compile
+             ls
+       - run:
+           name: Prepare ZIP to upload...
+           command: |
+             cd public
+             zip -r Houston.zip *
+             mkdir zip_f
+             mv Houston.zip zip_f
+             ls
+             echo "All is OK!"
+             ls zip_f
+       # collect reports
+       - store_artifacts:
+           path: ~/repo/public/zip_f
+           destination: build
+       - persist_to_workspace:
+           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
+           root: public/zip_f
+           # Must be relative path from root
+           paths:
+             - Houston.zip
  downstream:
     docker:
       # specify the version you desire here
