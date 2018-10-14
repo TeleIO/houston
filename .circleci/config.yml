@@ -47,10 +47,13 @@ jobs:
       - run:
           name: Prepare ZIP to upload...
           command: |
+            cd public
             zip Houston.zip *
             mkdir zip_f
             mv Houston.zip zip_f
+            ls
             echo "All is OK!"
+            ls zip_f
       # collect reports
 
       - store_artifacts:
