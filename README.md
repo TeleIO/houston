@@ -63,10 +63,9 @@ Houston was designed to have specialized UIs for specific stations or contexts. 
 
 ## Installing
 
-1. Install the latest version of [Telemachus](http://forum.kerbalspaceprogram.com/threads/24594)
-2. Download the latest version of Houston
-3. Copy everything in the `public/` directory to `[YOUR KSP FOLDER]/Game Data/Telemachus/Plugins/PluginData/Telemachus/houston/`
-4. Launch KSP, add the Telemachus parts to your ships, and have fun!
+1. Install the latest version of [Telemachus](http://github.com/TeleIO/Telemachus-1/releases/latest)
+2. If you are using the LATEST version of Telemachus Reborn, Houston is already packed in
+3. Launch KSP, add the Telemachus parts to your ships, and have fun!
 
 ## How do I play?
 
