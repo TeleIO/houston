@@ -7,7 +7,7 @@ defaults: &defaults
 version: 2
 jobs:
   flow:
-    <<: *defaults
+      <<: *defaults
       docker:
       # specify the version you desire here
          - image: circleci/ruby:2.4.1-node-browsers
