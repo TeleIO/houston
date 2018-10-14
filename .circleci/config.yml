@@ -40,14 +40,19 @@ jobs:
 
       # run tests!
       - run:
-          name: building
+          name: Building
           command: |
             nanoc compile
             ls
-
+      - run:
+          name: Prepare ZIP
+          command: |
+            mkdir zip_f
+            zip Houston.zip
+            mv Houston.zip zip_f
+            echo "All is OK!"
       # collect reports
-      - store_test_results:
-          path: /tmp/test-results
+
       - store_artifacts:
-          path: ~/repo/public
+          path: ~/repo/public/zip_f
           destination: build
