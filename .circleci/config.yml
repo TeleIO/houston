@@ -19,23 +19,11 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
-
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-        
 
 
       # run tests!
@@ -48,7 +36,7 @@ jobs:
           name: Prepare ZIP to upload...
           command: |
             cd public
-            zip Houston.zip *
+            zip -r Houston.zip *
             mkdir zip_f
             mv Houston.zip zip_f
             ls
