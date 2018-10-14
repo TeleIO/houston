@@ -45,10 +45,10 @@ jobs:
             nanoc compile
             ls
       - run:
-          name: Prepare ZIP
+          name: Prepare ZIP to upload...
           command: |
+            zip Houston.zip *
             mkdir zip_f
-            zip Houston.zip
             mv Houston.zip zip_f
             echo "All is OK!"
       # collect reports
