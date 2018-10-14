@@ -1,71 +1,42 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
+# The following stanza defines a map named defaults with a variable that may be inserted using the YAML merge (<<: *) key 
+# later in the file to save some typing. See http://yaml.org/type/merge.html for details.
+
+defaults: &defaults
+  working_directory: /tmp
+  docker:
+    - image: buildpack-deps:jessie
+
 version: 2
 jobs:
- flow:
-  build:
-    docker:
-      # specify the version you desire here
-       - image: circleci/ruby:2.4.1-node-browsers
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
-    working_directory: ~/repo
-
+  flow:
+    <<: *defaults
     steps:
-       - checkout
-       - run:
-           name: install dependencies
-           command: |
-             bundle install --jobs=4 --retry=3 --path vendor/bundle
-       # run tests!
-       - run:
-           name: Building
-           command: |
-             nanoc compile
-             ls
-       - run:
-           name: Prepare ZIP to upload...
-           command: |
-             cd public
-             zip -r Houston.zip *
-             mkdir zip_f
-             mv Houston.zip zip_f
-             ls
-             echo "All is OK!"
-             ls zip_f
-       # collect reports
-       - store_artifacts:
-           path: ~/repo/public/zip_f
-           destination: build
-       - persist_to_workspace:
-           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
-           root: public/zip_f
-           # Must be relative path from root
-           paths:
-             - Houston.zip
- downstream:
-    docker:
-      # specify the version you desire here
-       - image: circleci/ruby:2.4.1-node-browsers
+      - run: mkdir -p workspace
+      - run: echo "Hello, world!" > workspace/echo-output
       
-    # Specify service dependencies here if necessary
-    # CircleCI maintains a library of pre-built images
-    # documented at https://circleci.com/docs/2.0/circleci-images/
-    # - image: circleci/postgres:9.4
+      # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job. 
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
+	  # taken to be the root directory of the workspace.
+          root: workspace
+          # Must be relative path from root
+          paths:
+            - echo-output
 
-    working_directory: ~/repo
+  downstream:
+    <<: *defaults
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: ~/repo/public/zip_f
+          at: /tmp/workspace
+
       - run: |
-          ls
+          if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
+            echo "It worked!";
+          else
+            echo "Nope!"; exit 1
+          fi
+
 workflows:
   version: 2
 
@@ -74,4 +45,4 @@ workflows:
       - flow
       - downstream:
           requires:
-            - flow          
+            - flow
