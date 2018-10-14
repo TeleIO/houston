@@ -1,4 +1,4 @@
-# Houston: KSP Mission Control
+# Houston: KSP Mission Control for Telemachus Reborn
 
 Have you ever been launching Kerbals into the Sun and thought
 
@@ -10,7 +10,7 @@ If the answer to either of these questions is *"Sure?"*, then behold **Houston**
 
 ![We have liftoff!](readme-images/ascension-preview.gif)
 
-Houston is a UI for [Telemachus](http://forum.kerbalspaceprogram.com/threads/24594), the premiere mod for KSP Telemetry and Flight Control data.
+Houston is a UI for [Telemachus Reborn](http://github.com/TeleIO/Telemcahus-1), the premiere mod for KSP Telemetry and Flight Control data.
 
 Houston's designed for Mission Control Parties. What's a Mission Control Party? It's when you get a bunch of friends together and each person has a separate station, and you somehow have to coordinate with the pilot (who you may have locked in the bathroom with some snacks for dramatic effect) to try to pull off an actual mission.
 
@@ -31,6 +31,7 @@ Houston has a ton of really cool features, some of which work!
 * A 3D navball (**huuge** thanks to [Lokaltog/KeRD](https://github.com/Lokaltog/KeRD) for an awesome implementation)
 * Throttle and Atmosphere gauges
 * Position Maps
+* A 3D Orbit Map (using Three.js)
 * A Hohmann Transfer tool (not guaranteed to properly transfer you as per Hohmann's specifications)
 * Links to the Telemachus Console and [MKON](https://github.com/chrisnic/mkon?files=1)
 * **Data Tables**, whoooo!
@@ -103,9 +104,9 @@ Fork it and make a PR if you want to improve something! :D
 
 ## Thanks to
 
-* The [Telemachus](http://forum.kerbalspaceprogram.com/threads/24594) mod team
+* The [Telemachus Reborn](http://github.com/TeleIO/Telemachus-1) mod team
 * [Lokaltog/KeRD](https://github.com/Lokaltog/KeRD) for an awesome Navball implementation
-
+* [@tcannonfodder](https://github.com/tcannonfodder) for first Houstom implementation
 ## Why?
 
 > Why does a man climb Everest? Because it is there
