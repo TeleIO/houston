@@ -10,7 +10,7 @@ If the answer to either of these questions is *"Sure?"*, then behold **Houston**
 
 ![We have liftoff!](readme-images/ascension-preview.gif)
 
-Houston is a UI for [Telemachus Reborn](http://github.com/TeleIO/Telemcahus-1), the premiere mod for KSP Telemetry and Flight Control data.
+Houston is a UI for [Telemachus Reborn](https://github.com/TeleIO/Telemachus-1), the premiere mod for KSP Telemetry and Flight Control data.
 
 Houston's designed for Mission Control Parties. What's a Mission Control Party? It's when you get a bunch of friends together and each person has a separate station, and you somehow have to coordinate with the pilot (who you may have locked in the bathroom with some snacks for dramatic effect) to try to pull off an actual mission.
 

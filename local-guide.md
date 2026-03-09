@@ -3,7 +3,7 @@ Hey there! So you've got some people together and you want to play Houston under
 ## The equipment
 
 To play Houston, you'll need:
-* **The Pilot Computer**: 1 computer with Kerbal Space Program and the [Telemachus](http://forum.kerbalspaceprogram.com/threads/24594-1-0-4-(2015-07-04)-Telemachus-–-Telemetry-and-Flight-Control-in-the-Web-Browser) mod installed. This will be the computer you [install Houston on](http://kerbal.curseforge.com/ksp-mods/235158-houston), and the one the pilot will use when playing. Ideally, it should be powerful enough to play KSP and mirroring the display on both a monitor and a TV (more on this in the setup section).
+* **The Pilot Computer**: 1 computer with Kerbal Space Program and the [Telemachus](http://forum.kerbalspaceprogram.com/threads/24594-1-0-4-(2015-07-04)-Telemachus-–-Telemetry-and-Flight-Control-in-the-Web-Browser) mod installed. This will be the computer you [install Houston on](https://github.com/TeleIO/houston), and the one the pilot will use when playing. Ideally, it should be powerful enough to play KSP and mirroring the display on both a monitor and a TV (more on this in the setup section).
 * A TV, projector, or other large screen. This will be the screen the Pilot Computer uses.
 * Computers (ideally laptops) for every other player. They don't need to be anything special or high-powered, they just need to be able to run Safari/Chrome decently well.
 * Tables and Chairs for Mission Control.
