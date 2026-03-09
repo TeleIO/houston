@@ -1,6 +1,14 @@
 # Temporary file directory
 tmp/
 
+# Build output
+public/
+
+# Nix / Ruby dev
+.gems/
+.direnv/
+flake.lock
+
 # Crash Log
 crash.log
 

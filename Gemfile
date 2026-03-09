@@ -1,7 +1,7 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-ruby '2.4.1'
-gem 'nanoc', '<4.0'
+ruby '>= 3.0'
+gem 'nanoc', '~> 3.8'
 gem 'sass'
 gem 'rake'
 gem 'uglifier'
