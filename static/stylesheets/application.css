@@ -1,21 +1,21 @@
 @font-face {font-family: 'PT Mono'; 
-  src: url('../fonts/ptm55f_w.eot'); 
-  src: local('PT Mono'), url('../fonts/ptm55f_w.eot?#iefix') format('embedded-opentype'),url('../fonts/ptm55f_w.woff') format('woff'),url('ptf55m_w.ttf') format('truetype'), url('../fonts/ptm55f_w.svg#PTMono-Regular') format('svg');}
+  src: url('/fonts/ptm55f_w.eot'); 
+  src: local('PT Mono'), url('/fonts/ptm55f_w.eot?#iefix') format('embedded-opentype'),url('/fonts/ptm55f_w.woff') format('woff'),url('/fonts/ptm55f_w.ttf') format('truetype'), url('/fonts/ptm55f_w.svg#PTMono-Regular') format('svg');}
 
 @font-face {font-family: 'PT Mono';
-  src: url('../fonts/ptm75f_w.eot');
+  src: url('/fonts/ptm75f_w.eot');
   font-style: normal;
   font-weight: bold; 
-  src: local('PT Mono Bold'), url('../fonts/ptm75f_w.eot?#iefix') format('embedded-opentype'), url('../fonts/ptm75f_w.woff') format('woff'),url('../fonts/ptm75f_w.ttf') format('truetype'), url('../fonts/ptm75f_w.svg#PTMono-Bold') format('svg');}
+  src: local('PT Mono Bold'), url('/fonts/ptm75f_w.eot?#iefix') format('embedded-opentype'), url('/fonts/ptm75f_w.woff') format('woff'),url('/fonts/ptm75f_w.ttf') format('truetype'), url('/fonts/ptm75f_w.svg#PTMono-Bold') format('svg');}
 
 @font-face {
     font-family: 'AeroMatics Display Bold';
-    src: url('../fonts/aero_matics_display_bold-webfont.eot');
-    src: url('../fonts/aero_matics_display_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/aero_matics_display_bold-webfont.woff2') format('woff2'),
-         url('../fonts/aero_matics_display_bold-webfont.woff') format('woff'),
-         url('../fonts/aero_matics_display_bold-webfont.ttf') format('truetype'),
-         url('../fonts/aero_matics_display_bold-webfont.svg#aero_matics_displaybold') format('svg');
+    src: url('/fonts/aero_matics_display_bold-webfont.eot');
+    src: url('/fonts/aero_matics_display_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/aero_matics_display_bold-webfont.woff2') format('woff2'),
+         url('/fonts/aero_matics_display_bold-webfont.woff') format('woff'),
+         url('/fonts/aero_matics_display_bold-webfont.ttf') format('truetype'),
+         url('/fonts/aero_matics_display_bold-webfont.svg#aero_matics_displaybold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -51,7 +51,7 @@ html,body {
 
 body{
   background: #9B9B9B;
-  background-image: url('../images/background-noise.png');
+  background-image: url('/images/background-noise.png');
 }
 
 header,#content{
@@ -94,7 +94,7 @@ nav.open{
 
 nav figure, #close-navigation{
   background: #9B9B9B;
-  background-image: url('../images/background-noise.png');
+  background-image: url('/images/background-noise.png');
   box-shadow: inset 0px -1px 7px 0px rgba(0,0,0,0.50);
 }
 
@@ -148,7 +148,7 @@ nav.open #overlay-grid{
   font-size: 20px;
   position: fixed;
   background-color: rgba(51,51,51, 1);
-  background-image: url('../images/title-noise.png');
+  background-image: url('/images/title-noise.png');
   width: 80px;
   text-align: center;
   left: 300px;
@@ -197,7 +197,7 @@ nav.open #overlay-grid{
   text-align: center;
 
   background: #9B9B9B;
-  background-image: url('../images/background-noise.png');
+  background-image: url('/images/background-noise.png');
   border-radius: 8px;
 
   color: rgba(51,51,51, 1);
@@ -224,7 +224,7 @@ nav.open #overlay-grid{
 #settings button{
   min-width: 100px;
   background-color: rgba(51,51,51, 1);
-  background-image: url('../images/title-noise.png');
+  background-image: url('/images/title-noise.png');
   border: 1px solid ;
   border-radius: 8px;
   border: 2px solid #9B9B9B;
@@ -242,7 +242,7 @@ h1{
   /* Ground Track: */
   font-size: 55px;
   background-color: rgba(51,51,51, 1);
-  background-image: url('../images/title-noise.png');
+  background-image: url('/images/title-noise.png');
   color: rgba(51,51,51, 1);
   margin: 0px;
   margin: auto;
@@ -504,7 +504,7 @@ button#brake.on{
   margin-bottom: 0px;
 /*
   background-color: #4A4A4A;
-  background-image: url('../images/title-noise.png');
+  background-image: url('/images/title-noise.png');
   color: #4A4A4A;
 
   text-shadow: 0px 1px 1px rgba(255,255,255,.3);

@@ -20,3 +20,10 @@ icons/
 houston-logo.png
 houston.zip
 .byebug_history
+.claude/
+
+# Node / Bun
+node_modules/
+bun.lock
+build/
+.svelte-kit/
