@@ -41,7 +41,7 @@ javascripts:
       - static/js/orbital_position_data.js
       - static/js/position_data_formatter.js
       - static/js/orbital_map.js
-      - static/js/resizeSensor.js
+      - static/js/ResizeSensor.js
 
     - &navball
       - static/js/three.min.js
@@ -65,7 +65,7 @@ javascripts:
 
       - static/js/docking_position_data.js
       - static/js/docking_map.js
-      - static/js/resizeSensor.js
+      - static/js/ResizeSensor.js
 
     - &hohmann_intercept
       - static/js/hohmann-intercept.js
